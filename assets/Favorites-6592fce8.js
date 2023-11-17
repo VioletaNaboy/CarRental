@@ -1,0 +1,1 @@
+import{u as t,j as s}from"./index-c3ec2581.js";import{s as e,C as a}from"./CarsList-3e01fd05.js";const c=()=>{const r=t(e);return s.jsxs("div",{children:[s.jsx("h1",{children:"Favorites"}),s.jsx(a,{cars:r})]})};export{c as default};
