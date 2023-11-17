@@ -1,12 +1,7 @@
 import { CarsListItem } from './CarsListItem';
 import { List } from './CarsList.styled';
-import { useSelector } from 'react-redux';
-import {
-    selectCars
-} from '../../redux/cars/selectors';
 
-export const CarsList = () => {
-  const cars = useSelector(selectCars);
+export const CarsList = ({cars}) => {
   return (
     (
       <List >

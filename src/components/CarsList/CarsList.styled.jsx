@@ -20,6 +20,7 @@ flex-direction: column;
 gap: 18px;
 `;
 export const PhotoWrapper = styled.div`
+position:relative;
 width: 274px;
 height: 268px;
 border-radius: 14px;
@@ -55,4 +56,15 @@ align-items: center;
 border-radius: 12px;
 background: #3470FF;
 color: #fff;
+`
+export const ButtonHeart = styled.button`
+width: 46px;
+height: 46px;
+position: absolute;
+top:0;
+right:0;
+justify-content: center;
+align-items: center;
+border:none;
+background: transparent;
 `

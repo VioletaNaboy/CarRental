@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import {
+    selectCars
+} from '../redux/cars/selectors';
 import { fetchCars } from '../redux/cars/operations';
 import { CarsList } from '../components/CarsList/CarsList';
 import { LoadMoreButton } from '../components/LoadMoreButton/LoadMoreButton.styled';
@@ -13,13 +16,13 @@ const Catalog = () => {
     dispatch(fetchCars(page));
     }, [page]);
     const handleClickMore = () => {
-        console.log(page + 1);
         setPage(page + 1);  
     }
+    const cars = useSelector(selectCars);
   return (
     <div>
       <h1>Catalog</h1>
-          <CarsList />
+          <CarsList cars={cars} />
           <LoadMoreButton type="button" onClick={handleClickMore}>Load More</LoadMoreButton>
     </div>
   );
