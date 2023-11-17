@@ -1,12 +1,16 @@
 import styled from '@emotion/styled';
-import example from './assets/background.png';
 import 'normalize.css';
 
 export const AppWrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-image: url(${example});
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 100% 100%;
+  mim-width: 320px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 120px 0;
+  @media only screen and (min-width: 768px) {
+   width: 748px;
+   } 
+   @media only screen and (min-width: 1220px) {
+   width: 1180px;
+  } 
+  background-color: #fff;
 `;

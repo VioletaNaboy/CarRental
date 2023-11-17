@@ -1,51 +1,45 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import { CarSportSharp } from 'react-ionicons'
+import styled, { keyframes } from 'styled-components';
 
-export const HeaderContainer = styled.div`
-  padding: 10px;
-`;
 
-export const Navigation = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const StyledLink = styled(Link)`
-  padding: 8px 16px;
-  color: #ffffff; /* White text color */
-  text-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
-  transition:
-    color 0.3s,
-    text-shadow 0.3s;
-
-  &:hover,
-  &:focus {
-    color: #00baff; /* Blue text color on hover/focus */
-    text-shadow:
-      0 0 5px #00baff,
-      0 0 10px #00baff,
-      0 0 20px #00baff,
-      0 0 40px #00baff,
-      0 0 80px #00baff;
+const fadeIn = keyframes`
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
   }
 `;
+export const CarIcon = styled(CarSportSharp)`
+animation: ${fadeIn} 800ms ease-in-out;
+`
 
-export const IconWrapper = styled.svg`
-  width: ${(props) => props.size || '12px'};
-  height: ${(props) => props.size || '12px'};
-  fill: ${(props) => props.color || '#ffffff'};
-  display: inline-block;
-  margin-right: 5px;
-  box-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
-`;
+export const StyledLink = styled(NavLink)`
+padding: 12px;
+font-size: 16px;
+font-weight: 500;
+color: #121417;
+text-transform: uppercase;
+&.active {
+    background: rgba(18, 20, 23, 0.50);
+    border-radius: 16px;
+    padding: 14px;
+    color: #fff;
+  }
+`
+export const HeaderContainer = styled.header`
+width: 100%;
+position: fixed;
+display: flex;
+top: 0;
+right: 0;
+padding: 32px;
+justify-content: space-evenly;
+align-items: center;
+background: #fff;
+`
+export const NavWrapper = styled.nav`
+display: flex;
+gap: 14px;
+`
