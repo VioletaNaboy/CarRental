@@ -1,4 +1,4 @@
-import{s as c,r as s,f as i,u as l,j as e}from"./index-00205f73.js";import{u,C as d}from"./CarsList-7a8b9374.js";const h=t=>t.cars.items,x=c.button`
+import{s as c,r as s,f as i,u as l,j as e}from"./index-47cd4e96.js";import{u,C as d}from"./CarsList-5d700d9d.js";const h=t=>t.cars.items,x=c.button`
 background:none;
 border: none;
 text-align: center;
