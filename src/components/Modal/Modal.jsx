@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import { MainInfo, AdditionalInfo, BtnClose, InfoBlock, InfoUnit, ModalBackdrop, ModalContainer, Photo, Description } from './Modal.styled';
 import { CloseOutline } from 'react-ionicons';
 export const Modal = ({ isOpen, onClose, car }) => {
   if (!isOpen) return null;
+   const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+    };
+    // const handleKeyPress = (e) => {
+    // if (e.key === 'Escape') {
+    //   onClose();
+    // }
+    // };
+//      useEffect(() => {
+//     if (isOpen) {
+//       document.addEventListener('keydown', handleKeyPress);
+//       return () => {
+//         document.removeEventListener('keydown', handleKeyPress);
+//       };
+//     }
+//   }, [isOpen]);
 
   return ReactDOM.createPortal(
-    <ModalBackdrop>
+    <ModalBackdrop onClick={handleBackdropClick}>
       <ModalContainer>
         <BtnClose onClick={onClose}>
           <CloseOutline

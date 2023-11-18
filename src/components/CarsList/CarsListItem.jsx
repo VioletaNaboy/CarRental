@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   CarsItem, PhotoWrapper, Photo, MainInfo, AdiitionalInfo, ButtonMore, ButtonHeart 
 } from './CarsList.styled';
@@ -34,7 +34,19 @@ export const CarsListItem = ({ car }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
-
+    const handleKeyPress = (e) => {
+    if (e.key === 'Escape') {
+      setModalOpen(false);
+    }
+  };
+    useEffect(() => {
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleKeyPress);
+      return () => {
+        document.removeEventListener('keydown', handleKeyPress);
+      };
+    }
+  }, [isModalOpen]);
   return (
     <CarsItem>
       <Modal isOpen={isModalOpen} onClose={closeModal} car={car} />
