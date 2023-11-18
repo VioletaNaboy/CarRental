@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   CarsItem, PhotoWrapper, Photo, MainInfo, AdiitionalInfo, ButtonMore, ButtonHeart 
 } from './CarsList.styled';
@@ -6,7 +7,7 @@ import { addToFavorites, removeFromFavorites } from '../../redux/favorites/favor
 import { HeartOutline, Heart } from 'react-ionicons'
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { selectFavoritesCars } from '../../redux/favorites/selectors';
-
+import { Modal } from '../Modal/Modal';
 
 export const CarsListItem = ({ car }) => {
     const favorites = useSelector(selectFavoritesCars);
@@ -22,9 +23,21 @@ export const CarsListItem = ({ car }) => {
   };
   const foundElement = favorites.find(function (item) {
     return item.id === car.id;
-});
+  });
+  
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <CarsItem>
+      <Modal isOpen={isModalOpen} onClose={closeModal} car={car} />
     <PhotoWrapper>
         <Photo src={car.img} alt={` Photo of a car ${car.make} ${car.model} `} />  
         {foundElement ?
@@ -41,18 +54,18 @@ export const CarsListItem = ({ car }) => {
            height="18px"
               width="18px" />
           </ButtonHeart>}
-      </PhotoWrapper>
+    </PhotoWrapper>
       
-          <MainInfo>
+    <MainInfo>
               <p>
               {car.make}
               <span>{car.model}</span>,
                   {car.year}
               </p>
             <span>{car.rentalPrice}</span>  
-          </MainInfo>
-          <AdiitionalInfo>{car.adress} | {car.make} | {car.make} | {car.rentalCompany} | {car.make} | {car.make} | {car.mileage}</AdiitionalInfo> 
-    <ButtonMore type="button">Learn more</ButtonMore>      
+    </MainInfo>
+      <AdiitionalInfo>{car.adress} | {car.make} | {car.make} | {car.rentalCompany} | {car.make} | {car.make} | {car.mileage}</AdiitionalInfo> 
+    <ButtonMore type="button" onClick={openModal}>Learn more</ButtonMore>      
     </CarsItem>
   );
 };

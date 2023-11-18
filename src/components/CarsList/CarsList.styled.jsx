@@ -40,7 +40,6 @@ color: #121417;
 font-size: 16px;
 font-weight: 500;
 line-height: 1.5;
-
 `
 export const AdiitionalInfo = styled.div`
 width: 100%;
