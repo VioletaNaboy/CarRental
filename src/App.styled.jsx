@@ -10,7 +10,7 @@ export const AppWrapper = styled.div`
    width: 748px;
    } 
    @media only screen and (min-width: 1220px) {
-   width: 1180px;
+   width: 1200px;
   } 
   background-color: #fff;
 `;

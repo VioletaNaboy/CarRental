@@ -31,6 +31,7 @@ text-transform: uppercase;
 export const HeaderContainer = styled.header`
 width: 100%;
 position: fixed;
+z-index: 100;
 display: flex;
 top: 0;
 right: 0;

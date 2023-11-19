@@ -5,8 +5,9 @@ import { NavLink } from "react-router-dom";
 export const Header = () => {
     return (
         <HeaderContainer>
-           <NavLink to="/"><CarIcon  height="48px"
-  width="48px"/></NavLink> 
+    <NavLink to="/">
+                <CarIcon height="48px" width="48px" />
+    </NavLink> 
      <NavWrapper>
         <StyledLink to="/" end>
           Home
