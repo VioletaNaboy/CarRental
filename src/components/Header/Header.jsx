@@ -1,11 +1,12 @@
 import React from "react";
 import { StyledLink, HeaderContainer, NavWrapper, CarIcon } from "./Header.styled";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
     return (
         <HeaderContainer>
-            <CarIcon  height="48px"
-  width="48px"/>
+           <NavLink to="/"><CarIcon  height="48px"
+  width="48px"/></NavLink> 
      <NavWrapper>
         <StyledLink to="/" end>
           Home

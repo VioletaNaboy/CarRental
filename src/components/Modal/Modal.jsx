@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import { MainInfo, AdditionalInfo, BtnClose, InfoBlock, InfoUnit, ModalBackdrop, ModalContainer, Photo, Description } from './Modal.styled';
 import { CloseOutline } from 'react-ionicons';
+import DummyPhoto from '../../img/dummyPhoto.jpg';
 export const Modal = ({ isOpen, onClose, car }) => {
   if (!isOpen) return null;
    const handleBackdropClick = (e) => {
@@ -9,19 +10,6 @@ export const Modal = ({ isOpen, onClose, car }) => {
       onClose();
     }
     };
-    // const handleKeyPress = (e) => {
-    // if (e.key === 'Escape') {
-    //   onClose();
-    // }
-    // };
-//      useEffect(() => {
-//     if (isOpen) {
-//       document.addEventListener('keydown', handleKeyPress);
-//       return () => {
-//         document.removeEventListener('keydown', handleKeyPress);
-//       };
-//     }
-//   }, [isOpen]);
 
   return ReactDOM.createPortal(
     <ModalBackdrop onClick={handleBackdropClick}>
@@ -33,7 +21,9 @@ export const Modal = ({ isOpen, onClose, car }) => {
   width="24px"
 />
         </BtnClose>
-              <Photo src={car.img} alt={` Photo of a car ${car.make} ${car.model}`} />
+        <Photo src={ car.img } alt={` Photo of a car ${car.make} ${car.model}`} onError={(e) => {
+                      e.currentTarget.src = DummyPhoto;
+                    }}/>
               <MainInfo>
               {car.make}{" "}
               <span>{car.model}</span>,{" "}

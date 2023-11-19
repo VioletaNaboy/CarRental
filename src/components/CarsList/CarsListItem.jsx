@@ -8,7 +8,7 @@ import { HeartOutline, Heart } from 'react-ionicons'
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { selectFavoritesCars } from '../../redux/favorites/selectors';
 import { Modal } from '../Modal/Modal';
-
+import DummyPhoto from '../../img/dummyPhoto.jpg';
 export const CarsListItem = ({ car }) => {
     const favorites = useSelector(selectFavoritesCars);
 
@@ -51,7 +51,9 @@ export const CarsListItem = ({ car }) => {
     <CarsItem>
       <Modal isOpen={isModalOpen} onClose={closeModal} car={car} />
     <PhotoWrapper>
-        <Photo src={car.img} alt={` Photo of a car ${car.make} ${car.model} `} />  
+        <Photo src={car.img} alt={` Photo of a car ${car.make} ${car.model} `}  onError={(e) => {
+                      e.currentTarget.src = DummyPhoto;
+                    }} />  
         {foundElement ?
           <ButtonHeart onClick={handleRemoveFromFavorites} type="button">
         <Heart
@@ -67,7 +69,6 @@ export const CarsListItem = ({ car }) => {
               width="18px" />
           </ButtonHeart>}
     </PhotoWrapper>
-      
     <MainInfo>
               <p>
               {car.make}
