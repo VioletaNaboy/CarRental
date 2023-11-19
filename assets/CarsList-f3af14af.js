@@ -1,4 +1,4 @@
-import{R as p,a as w,c as v,s as o,b as C,j as e,l as h,u as F,r as u,d as E,e as M}from"./index-50de46c1.js";function j(t=p){const s=t===p?w:v(t);return function(){const{store:a}=s();return a}}const R=j();function P(t=p){const s=t===p?R:j(t);return function(){return s().dispatch}}const I=P(),S=o.ul`
+import{R as p,b as w,c as v,s as o,d as C,j as e,l as h,u as F,r as u,e as E,g as M}from"./index-390801f0.js";function j(t=p){const s=t===p?w:v(t);return function(){const{store:a}=s();return a}}const R=j();function P(t=p){const s=t===p?R:j(t);return function(){return s().dispatch}}const I=P(),S=o.ul`
 display: flex;
 flex-wrap: wrap; 
 justify-content:center;
@@ -68,7 +68,7 @@ background: transparent;
   justify-content: center;
   align-items: center;
 `,A=o.div`
-  width: 461px;
+  width: 541px;
   background: white;
   padding: 40px;
   border-radius: 8px;
