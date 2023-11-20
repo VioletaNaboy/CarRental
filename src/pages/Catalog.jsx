@@ -23,8 +23,9 @@ const Catalog = () => {
     <div>
       <h1>Catalog</h1>
           <FilterForm/>
-          <CarsList cars={cars} />
-          <LoadMoreButton type="button" onClick={handleClickMore}>Load More</LoadMoreButton>
+      <CarsList cars={cars} />
+      {page <= 3 && <LoadMoreButton type="button" onClick={handleClickMore}>Load More</LoadMoreButton> }
+          
     </div>
   );
 };
