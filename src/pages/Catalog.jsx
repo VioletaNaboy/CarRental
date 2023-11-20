@@ -11,7 +11,6 @@ import { FilterForm } from '../components/FilterForm/FilterForm';
 
 const Catalog = () => {
     const [page, setPage] = useState(1);
-    // const page = 1;
     const dispatch = useDispatch();
     useEffect(() => {
     dispatch(fetchCars(page));
