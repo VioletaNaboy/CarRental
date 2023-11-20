@@ -1,4 +1,4 @@
-import{s as n,j as e}from"./index-3f77a438.js";const s="/CarRental/assets/main-11ad449a.jpg",r=n.img`
+import{s as n,j as e}from"./index-2dcd7781.js";const s="/CarRental/assets/main-11ad449a.jpg",r=n.img`
 width: 100%;
 height: auto;
 border-radius: 24px;
