@@ -1,4 +1,4 @@
-import{R as p,b as F,c as C,s as o,d as v,j as e,l as x,u as R,r as g,e as M,g as P}from"./index-2dcd7781.js";function b(t=p){const s=t===p?F:C(t);return function(){const{store:a}=s();return a}}const E=b();function B(t=p){const s=t===p?E:b(t);return function(){return s().dispatch}}const S=B(),I=o.ul`
+import{R as p,b as F,c as C,s as o,d as v,j as e,l as x,u as R,r as g,e as M,g as P}from"./index-117f15b9.js";function b(t=p){const s=t===p?F:C(t);return function(){const{store:a}=s();return a}}const E=b();function B(t=p){const s=t===p?E:b(t);return function(){return s().dispatch}}const S=B(),I=o.ul`
 display: flex;
 flex-wrap: wrap; 
 justify-content:center;
@@ -75,6 +75,7 @@ background: transparent;
   align-items: center;
 `,W=o.div`
   width: 541px;
+height: 752px;
   background: white;
   padding: 40px;
   border-radius: 8px;
@@ -90,7 +91,7 @@ background: transparent;
 width: 469px;
 height:248px;
 border-radius: 14px;
-margin-bottom:14px;
+margin-bottom:8px;
 `,Y=o.p`
 width: 100%;
 color: #121417;
@@ -110,7 +111,7 @@ flex-direction:column;
 gap: 8px;
 font-weight: 500;
 line-height: 1.43;
-margin-bottom:24px;
+margin-bottom:18px;
 `,h=o.span`
 display: inline-block;
 font-size: 12px;
