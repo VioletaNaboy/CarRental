@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import { MainInfo, AdditionalInfo, BtnClose, InfoBlock, InfoUnit, ModalBackdrop, ModalContainer, Photo, Description, BtnRentalCar } from './Modal.styled';
+import { MainInfo, AdditionalInfo, BtnClose, InfoBlock, InfoUnit, ModalBackdrop, ModalContainer, Photo, Description, BtnRentalCar, TagsWrapper } from './Modal.styled';
 import { CloseOutline } from 'react-ionicons';
 import DummyPhoto from '../../img/dummyPhoto.jpg';
 export const Modal = ({ isOpen, onClose, car }) => {
@@ -44,12 +44,21 @@ export const Modal = ({ isOpen, onClose, car }) => {
               </InfoBlock>
               <InfoBlock>
                  <span>Rental Conditions:</span> 
-                  <div>{car.rentalConditions.split('\n').map((condition, index) => {
+          <TagsWrapper>
+            {car.rentalConditions.split('\n').map((condition, index) => {
                       const [label, value] = condition.split(':');
                       return (
                       <InfoUnit key={index}>
                               {label} {value ? <span style={{ color: '#3470FF' }}>:{" "}{value}</span> : null}
-                      </InfoUnit>)}) }</div>            
+                      </InfoUnit>)
+                  })}
+            <InfoUnit >
+              Mileage:{" "}<span style={{ color: '#3470FF' }}> {car.mileage.toLocaleString()}</span>
+            </InfoUnit>
+            <InfoUnit >
+              Price:{" "}<span style={{ color: '#3470FF' }}> {car.rentalPrice}</span>
+            </InfoUnit>
+          </TagsWrapper>            
         </InfoBlock>
         <BtnRentalCar href='tel:+380730000000'>Rental car</BtnRentalCar>
       </ModalContainer>

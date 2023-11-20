@@ -77,7 +77,7 @@ export const CarsListItem = ({ car }) => {
               </p>
             <span>{car.rentalPrice}</span>  
     </MainInfo>
-      <AdiitionalInfo>{car.address} | {car.rentalCompany} | {car.type} | {car.make} | {car.mileage} | {car.functionalities[0]}</AdiitionalInfo> 
+      <AdiitionalInfo>{car.address} | {car.rentalCompany} | {car.type} | {car.make} | {car.mileage.toLocaleString()} | {car.functionalities[0]}</AdiitionalInfo> 
     <ButtonMore type="button" onClick={openModal}>Learn more</ButtonMore>      
     </CarsItem>
   );

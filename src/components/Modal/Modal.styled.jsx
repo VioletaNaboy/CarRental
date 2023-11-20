@@ -86,3 +86,8 @@ cursor:pointer;
     background: #0B44CD;
 }
 `
+export const TagsWrapper = styled.div`
+display:flex;
+flex-wrap:wrap;
+gap: 8px;
+`

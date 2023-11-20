@@ -1,4 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
+
+
 const initialState = {
   items: []
 };
@@ -8,11 +11,13 @@ export const favoritesCarsSlice = createSlice({
    reducers: {
     addToFavorites: (state, action) => {
       const newFavoriteCar = action.payload;
-      state.items.push(newFavoriteCar);
+       state.items.push(newFavoriteCar);
+       toast.success('Car successfully added to favorites!');
     },
     removeFromFavorites: (state, action) => {
       const carToRemove = action.payload;
       state.items = state.items.filter(car => car.id !== carToRemove.id);
+      toast.error('Car successfully removed from favorites!');
     },
   },
 });
