@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import { MainInfo, AdditionalInfo, BtnClose, InfoBlock, InfoUnit, ModalBackdrop, ModalContainer, Photo, Description } from './Modal.styled';
+import { MainInfo, AdditionalInfo, BtnClose, InfoBlock, InfoUnit, ModalBackdrop, ModalContainer, Photo, Description, BtnRentalCar } from './Modal.styled';
 import { CloseOutline } from 'react-ionicons';
 import DummyPhoto from '../../img/dummyPhoto.jpg';
 export const Modal = ({ isOpen, onClose, car }) => {
@@ -26,7 +26,7 @@ export const Modal = ({ isOpen, onClose, car }) => {
                     }}/>
               <MainInfo>
               {car.make}{" "}
-              <span>{car.model}</span>,{" "}
+              <span style={{ color: '#3470FF' }}>{car.model}</span>,{" "}
                   {car.year}
               </MainInfo>
               <AdditionalInfo> {car.address} | Year:{car.year} | Type: {car.type} | Fuel Consumption: {car.fuelConsumption} | Engine Size : {car.engineSize}</AdditionalInfo>
@@ -50,7 +50,8 @@ export const Modal = ({ isOpen, onClose, car }) => {
                       <InfoUnit key={index}>
                               {label} {value ? <span style={{ color: '#3470FF' }}>:{" "}{value}</span> : null}
                       </InfoUnit>)}) }</div>            
-              </InfoBlock>
+        </InfoBlock>
+        <BtnRentalCar href='tel:+380730000000'>Rental car</BtnRentalCar>
       </ModalContainer>
     </ModalBackdrop>,
     document.getElementById('portal-root')

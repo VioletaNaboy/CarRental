@@ -69,3 +69,20 @@ border-radius: 35px;
 background: #F9F9F9;
 margin-right: 8px;
 `
+export const BtnRentalCar = styled.a`
+height: 48px;
+width: 168px;
+border-radius: 12px;
+background: #3470FF;
+display: flex;
+padding: 14px 44px;
+justify-content: center;
+align-items: center;
+color: #FFF;
+font-weight: 600;
+line-height: 1.43;
+cursor:pointer;
+&:hover, &:focus {
+    background: #0B44CD;
+}
+`

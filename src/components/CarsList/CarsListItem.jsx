@@ -71,13 +71,13 @@ export const CarsListItem = ({ car }) => {
     </PhotoWrapper>
     <MainInfo>
               <p>
-              {car.make}
-              <span>{car.model}</span>,
+              {car.make}{" "}
+              <span style={{ color: '#3470FF' }}>{car.model}</span>,{" "}
                   {car.year}
               </p>
             <span>{car.rentalPrice}</span>  
     </MainInfo>
-      <AdiitionalInfo>{car.adress} | {car.make} | {car.make} | {car.rentalCompany} | {car.make} | {car.make} | {car.mileage}</AdiitionalInfo> 
+      <AdiitionalInfo>{car.address} | {car.rentalCompany} | {car.type} | {car.make} | {car.mileage} | {car.functionalities[0]}</AdiitionalInfo> 
     <ButtonMore type="button" onClick={openModal}>Learn more</ButtonMore>      
     </CarsItem>
   );

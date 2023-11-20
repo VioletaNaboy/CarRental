@@ -6,9 +6,13 @@ width:100%;
 height: 74px; 
 margin: 0 auto;
 display:flex;
+flex-wrap:wrap;
 justify-content: center;
-align-items:center;
+align-items:flex-end;
 gap: 18px;
+@media only screen and (min-width: 1200px) {
+  flex-wrap:nowrap; 
+}
 `
 export const FilterLabel = styled.label`
 color: #8A8A89;
@@ -27,10 +31,8 @@ height: 48px;
 border:none;
 `
 export const FilterInputGroup = styled.fieldset`
-display: flex;
-flex-direction: column;
-gap:8px;
 border:none;
+padding:0;
 `
 export const GroupLegend = styled.legend`
 color: #8A8A89;
@@ -50,6 +52,9 @@ color: #FFF;
 font-weight: 600;
 line-height: 1.43;
 border:none;
+&:hover, &:focus {
+    background: #0B44CD;
+}
 `
 export const FilterMileageFrom = styled.input`
 border-radius: 14px 0px 0px 14px;
@@ -74,4 +79,10 @@ padding: 16px 16px 16px 75px;
 font-size: 18px;
 font-weight: 500;
 line-height: 1.11;
+`
+export const FormElContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 8px; 
+align-items: flex-start;
 `

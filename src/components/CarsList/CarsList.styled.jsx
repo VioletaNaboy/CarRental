@@ -6,12 +6,16 @@ flex-wrap: wrap;
 justify-content:center;
 align-items: center;
 gap: 40px;
-margin: 40px 0 51px;
+margin: 284px 0 51px;
 @media only screen and (min-width: 768px) {
 row-gap: 44px;
 column-gap: 29px;   
-margin: 60px 0 80px;
+margin: 136px 0 80px;
+}
+@media only screen and (min-width: 1200px) {
+  margin: 40px 0 80px;  
 }`
+
 export const CarsItem = styled.li`
 width: 274px;
 height: 426px;
@@ -35,7 +39,6 @@ export const MainInfo = styled.div`
 width: 100%;
 display:flex;
 justify-content: space-between;
-align-items: center;
 color: #121417;
 font-size: 16px;
 font-weight: 500;
@@ -55,6 +58,10 @@ align-items: center;
 border-radius: 12px;
 background: #3470FF;
 color: #fff;
+border: none;
+&:hover, &:focus {
+    background: #0B44CD;
+}
 `
 export const ButtonHeart = styled.button`
 width: 46px;
