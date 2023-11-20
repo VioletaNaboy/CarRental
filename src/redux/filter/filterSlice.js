@@ -4,7 +4,7 @@ const initialState = {
   make: "",
   price: Infinity,
   mileageFrom: "",
-  mileageTo: Infinity,
+  mileageTo: 100000,
 }
 export const filtersSlice = createSlice({
   name: "filter",

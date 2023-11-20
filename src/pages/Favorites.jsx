@@ -7,7 +7,8 @@ const Favorites = () => {
   return (
     <div>
       <h1>Favorites</h1>
-      <CarsList cars={favorites} />
+      {favorites.length > 0 ? <CarsList cars={favorites} /> : <h2>Your favorite list is empty</h2>}
+      
     </div>
   );
 };

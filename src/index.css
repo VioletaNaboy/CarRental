@@ -27,6 +27,9 @@ h6,
 p {
   margin-top: 0;
 }
+h1 {
+  margin-bottom: 54px;
+}
 a {
   text-decoration: none;
 }

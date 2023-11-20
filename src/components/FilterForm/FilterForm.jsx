@@ -9,7 +9,7 @@ export const FilterForm = () => {
   const [priceRange, setPriceRange] = useState("all");
   const [make, setMake] = useState("all");
   const [mileageFrom, setMileageFrom] = useState(0);
-  const [mileageTo, setMileageTo] = useState(Infinity);
+  const [mileageTo, setMileageTo] = useState(100000);
   const handlePriceRangeChange = (e) => {
     setPriceRange(e.target.value);
     };
@@ -45,7 +45,7 @@ export const FilterForm = () => {
     const make = e.currentTarget.carMake.value === 'all' ? "" : e.currentTarget.carMake.value;
     const price = e.currentTarget.carPrice.value === 'all' ? Infinity : e.currentTarget.carPrice.value;
     const mileageFrom = Number(e.currentTarget.mileageFrom.value) ? e.currentTarget.mileageFrom.value : 0;
-    const mileageTo = Number(e.currentTarget.mileageTo.value) ? e.currentTarget.mileageTo.value : Infinity;
+    const mileageTo = Number(e.currentTarget.mileageTo.value) ? e.currentTarget.mileageTo.value : 100000;
     dispatch(setStatusFilter({ make, price, mileageFrom, mileageTo }));
     e.currentTarget.reset();
   }
