@@ -63,7 +63,7 @@ border-right: 1px solid rgba(138, 138, 137, 0.20);
 width: 160px;
 height: 48px;
 background: #F7F7FB;
-padding: 16px 16px 16px 75px;
+padding: 16px 16px 16px 74px;
 font-size: 18px;
 font-weight: 500;
 line-height: 1.11;
@@ -75,7 +75,7 @@ height: 48px;
 border:none;
 border-radius: 0px 14px 14px 0px;
 background: #F7F7FB;
-padding: 16px 16px 16px 75px;
+padding: 16px 16px 16px 74px;
 font-size: 18px;
 font-weight: 500;
 line-height: 1.11;
@@ -85,4 +85,18 @@ display: flex;
 flex-direction: column;
 gap: 8px; 
 align-items: flex-start;
+`
+export const FilterLabelFrom = styled.label`
+font-size: 18px;
+font-weight: 500;
+position:absolute;
+left: 24px;
+top:15px;
+`
+export const FilterLabelTo = styled.label`
+font-size: 18px;
+font-weight: 500;
+position:absolute;
+left: 184px;
+top:15px;
 `

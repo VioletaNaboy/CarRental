@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectFilter } from "../../redux/cars/selectors";
 import { setStatusFilter } from "../../redux/filter/filterSlice";
-import { Filter, FilterSelect, FilterInputGroup, FilterLabel, GroupLegend, SearchBtn, FilterMileageFrom, FilterMileageTo, FormElContainer } from "./FilterForm.styled";
+import { Filter, FilterSelect, FilterInputGroup, FilterLabel, GroupLegend, SearchBtn, FilterMileageFrom, FilterMileageTo, FormElContainer, FilterLabelFrom, FilterLabelTo } from "./FilterForm.styled";
 import makes from '../../files/makes.json';
 export const FilterForm = () => {
   const dispatch = useDispatch();
@@ -63,11 +63,11 @@ export const FilterForm = () => {
         <FilterInputGroup>
           <FormElContainer>
           <GroupLegend>Сar mileage / km</GroupLegend>
-          <div style={{ display: "flex" }}>
-            <FilterLabel></FilterLabel>
-            <FilterMileageFrom id="mileageFrom" value={mileageFrom} onChange={handleMileageFromChange}/>
-            <FilterLabel></FilterLabel>
-            <FilterMileageTo id="mileageTo" value={mileageTo} onChange={handleMileageToChange}/>
+          <div style={{ display: "flex", position: "relative" }}>
+            <FilterLabelFrom >From</FilterLabelFrom>
+            <FilterMileageFrom id="mileageFrom" type="number" value={mileageFrom} onChange={handleMileageFromChange}/>
+            <FilterLabelTo>To</FilterLabelTo>
+            <FilterMileageTo id="mileageTo" type="number" value={mileageTo} onChange={handleMileageToChange}/>
             </div>
           </FormElContainer>
         </FilterInputGroup>
