@@ -14,6 +14,7 @@ export const ModalBackdrop = styled.div`
 
 export const ModalContainer = styled.div`
   width: 541px;
+height: 752px;
   background: white;
   padding: 40px;
   border-radius: 8px;
@@ -32,7 +33,7 @@ export const Photo = styled.img`
 width: 469px;
 height:248px;
 border-radius: 14px;
-margin-bottom:14px;
+margin-bottom:8px;
 `
 export const MainInfo = styled.p`
 width: 100%;
@@ -56,7 +57,7 @@ flex-direction:column;
 gap: 8px;
 font-weight: 500;
 line-height: 1.43;
-margin-bottom:24px;
+margin-bottom:18px;
 `
 export const InfoUnit = styled.span`
 display: inline-block;

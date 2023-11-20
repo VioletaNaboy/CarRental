@@ -22,7 +22,7 @@ flex-direction: row;
 export const TitleMain = styled.h1`
 color: #3470FF;
 font-size: 56px;
-margin: 56px 0 32px auto;
+margin: 56px 0 12px;
 `
 
 export const SubtitleMain = styled.h2`
